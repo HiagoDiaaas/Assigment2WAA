@@ -67,8 +67,9 @@ public class BookController {
     }
 
     // d. Media Type Versioning: GET /books/{id} with Accept header
-    @GetMapping(value = "/books/{id}", produces = "application/cs.miu.edu-v1+json")
+    @GetMapping(value = "/books/{id}", produces = "application/cs.miu.edu-v2+json")
     public Book getBookByIdMediaType(@PathVariable int id) {
         return bookService.getBookById(id);
     }
+
 }
